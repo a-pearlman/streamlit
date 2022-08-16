@@ -28,7 +28,7 @@ i = df[df['days'] == df['days'].min()].index[0]
 
 name = df['Name'][i]
 date1 = df['Birthday'][i]
-days = df['days'][i]
+days = df['days'][i].days
 
 n = list(df['Name'])
 
@@ -36,7 +36,7 @@ st.text("The next Birthday is...")
 button = st.button("Click me!")
 if button:
     st.balloons()
-    st.text(f'{name}\'s birthday is in {days}.days days on {date1}')
+    st.text(f'{name}\'s birthday is in {days} days on {date1}')
 
 st.text("Looking for someone's Birthday?")
 e = st.selectbox('Name', n)
