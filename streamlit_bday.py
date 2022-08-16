@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import datetime as dt
 
-st.title("When's the next Birthday??")
+st.title("When's the next Birthday?? 🥳️🎉")
 
 df = pd.read_csv('Birthdays.csv')
 
@@ -43,11 +43,11 @@ if button:
 st.text("Looking for someone's Birthday?")
 e = st.selectbox('Name', n)
 if e == 'Lydia':
-    st.text('Lydia\'s Birthday is ????')
+    st.text('Lydia\'s Birthday is ???? 😈')
 else:
     v = df[df['Name'] == e].index[0]
     v = df['Birthday'][v]
-    st.text(f'{e}\'s Birthday is on {v}')
+    st.text(f'{e}\'s Birthday is on {v} 🎊🎁')
 
 def d(x):
     return x.days
