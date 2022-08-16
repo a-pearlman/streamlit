@@ -38,13 +38,16 @@ st.text("The next Birthday is...")
 button = st.button("Click me!")
 if button:
     st.balloons()
-    st.text(f'{name}\'s birthday is in {days} days on {date1}')
+    st.text(f'{name}\'s Birthday is in {days} days on {date1}')
 
 st.text("Looking for someone's Birthday?")
 e = st.selectbox('Name', n)
-v = df[df['Name'] == e].index[0]
-v = df['Birthday'][v]
-st.text(f'{e}\'s birthday is on {v}')
+if e == 'Lydia':
+    st.text('Lydia\'s Birthday is ????')
+else:
+    v = df[df['Name'] == e].index[0]
+    v = df['Birthday'][v]
+    st.text(f'{e}\'s Birthday is on {v}')
 
 def d(x):
     return x.days
