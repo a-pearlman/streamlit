@@ -15,14 +15,16 @@ def g(x):
     y[1] = int(y[1])
     y[2] = int(y[2])
     z = dt.date(date.year, y[1], y[2])
-    d = z - date
     if  z < date:
-        p = d + dt.timedelta(365)
-    else:
-        p = d
-    return p
- 
-df['days'] = df['Birthday'].apply(g)
+        z += dt.timedelta(365)
+    return z
+        
+def h(x):
+    d = x - date
+    return d
+
+df['Birthday'] = df['Birthday'].apply(g)
+df['days'] = df['Birthday'].apply(h)
 
 i = df[df['days'] == df['days'].min()].index[0]
 
