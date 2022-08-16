@@ -2,7 +2,4 @@ altair
 pandas
 streamlit
 numpy
-matplotlib
-seaborn
-statsmodels
-sklearn
+datetime
