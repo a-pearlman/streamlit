@@ -36,7 +36,7 @@ st.text("The next Birthday is...")
 button = st.button("Click me!")
 if button:
     st.balloons()
-    st.text(f'{name}\'s birthday is in {days} days on {date1}')
+    st.text(f'{name}\'s birthday is in {days}.days days on {date1}')
 
 st.text("Looking for someone's Birthday?")
 e = st.selectbox('Name', n)
