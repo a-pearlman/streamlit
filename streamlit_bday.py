@@ -47,4 +47,4 @@ st.text(f'{e}\'s birthday is on {v}')
 st.text('Show me everyone\'s Birthday?')
 b = st.button('Yes!')
 if b:
-    df
+    df[['Name', 'Birthday']]
