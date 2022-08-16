@@ -4,7 +4,7 @@ import streamlit as st
 
 st.title("When's the next Birthday??")
 
-df = pd.read_csv('C:/Users/Abigail.Pearlman/OneDrive - Gatwick Airport Limited/Birthdays.csv')
+df = pd.read_csv('Birthdays.csv')
 
 date = dt.date.today()
 
