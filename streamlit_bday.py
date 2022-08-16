@@ -40,7 +40,8 @@ if button:
 
 st.text("Looking for someone's Birthday?")
 e = st.selectbox('Name', n)
-v = df['Birthday'][e]
+v = df[df['Name'] == e].index[0]
+v = df['Birthday'][v]
 st.text(f'{e}\'s birthday is on {v}')
 
 st.text('Show me everyone\'s Birthday?')
