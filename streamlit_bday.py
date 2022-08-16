@@ -24,9 +24,11 @@ def g(x):
  
 df['days'] = df['Birthday'].apply(g)
 
-name = df[df['days'] == df['days'].min()]['Name']
-date1 = df[df['days'] == df['days'].min()]['Birthday']
-days = df[df['days'] == df['days'].min()]['days']
+i = df[df['days'] == df['days'].min()].index[0]
+
+name = df['Name'][i]
+date1 = df['Birthday'][i]
+days = df['days'][i]
 
 n = list(df['Name'])
 
