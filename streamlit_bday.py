@@ -44,7 +44,9 @@ v = df[df['Name'] == e].index[0]
 v = df['Birthday'][v]
 st.text(f'{e}\'s birthday is on {v}')
 
+df['d'] = df['days'].days
+
 st.text('Show me everyone\'s Birthday?')
 b = st.button('Yes!')
 if b:
-    df[['Name', 'Birthday']]
+    df[['Name', 'Birthday', 'd']]
